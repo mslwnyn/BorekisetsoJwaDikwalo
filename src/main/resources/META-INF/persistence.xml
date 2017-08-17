@@ -26,4 +26,4 @@
       <property name="hibernate.connection.charSet" value="UTF-8"/>     
     </properties>  
   </persistence-unit>
-</persistence>e>
+</persistence>
