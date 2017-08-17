@@ -10,3 +10,4 @@ nbdist/
 .netbeans_automatic_build
 .class
 lib
+/target/
