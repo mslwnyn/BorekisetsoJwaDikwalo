@@ -1,0 +1,29 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+  <xsd:element name="BorekisetsoJwaDikwalo" type="borekisetsoJwaDikwaloType"/>
+  <xsd:complexType name="leinaType" >
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string" >
+        <xsd:attribute type="xsd:string" name="lang" use="required"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="bakwadiType">
+      <xsd:sequence>
+          <xsd:element type="xsd:string" name="mokwadi" maxOccurs="unbounded" minOccurs="1"/>  
+      </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="lekwaloType" >
+    <xsd:sequence>
+      <xsd:element type="leinaType" name="leina"  />
+      <xsd:element type="xsd:short" name="ngwaga"  />
+      <xsd:element type="xsd:float" name="tlhwatlhwa"  />
+      <xsd:element type="bakwadiType" name="bakwadi" />
+    </xsd:sequence>
+    <xsd:attribute type="xsd:string" name="mohuta" use="required"  />
+  </xsd:complexType>
+  <xsd:complexType name="borekisetsoJwaDikwaloType">
+    <xsd:sequence>
+      <xsd:element type="lekwaloType" name="Lekwalo" maxOccurs="unbounded" minOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

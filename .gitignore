@@ -9,3 +9,4 @@ nbdist/
 .nb-gradle/
 .netbeans_automatic_build
 .class
+lib
